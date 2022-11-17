@@ -85,7 +85,8 @@
                 <th>language</th>
               </tr>
               ${this.planets.map(planet => {
-            return `
+			  if(planet.name != "loleus.github.io") {
+			              return `
                 <tr>
                 <td>${planet.name}</td>
                 <td>${planet.id}</td>
@@ -93,6 +94,7 @@
                 <td>${planet.language}</td>
               </tr>
                 `
+			  }
           }).join("")}
             </table>
           </span>
