@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Repos</title>
+  <style>
+    * {
+      color: beige;
+      text-align: center;
+      font-family: 'Barlow', sans-serif;
+    }
+    @font-face {
+      font-family: Barlow;
+      src: url(/assets/fonts/Barlow/Barlow-Regular.ttf);
+    }
+    body {
+      background: rgb(32, 35, 41);
+    }
+  </style>
+</head>
+
+<body>
+
+  <star-wars-planets>
+  </star-wars-planets>
+
+  <script>
+    customElements.define("star-wars-planets", class extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+      }
+      static get observedAttributes() { return ["loading", "planets"]; }
+      get loading() {
+        return JSON.parse(this.getAttribute("loading"));
+      }
+      set loading(v) {
+        this.setAttribute("loading", JSON.stringify(v));
+      }
+      get planets() {
+        return JSON.parse(this.getAttribute("planets"));
+      }
+      set planets(v) {
+        this.setAttribute("planets", JSON.stringify(v));
+      }
+      async fetchPlanets(url) {
+        this.loading = true;
+        const response = await fetch(url, { mode: 'cors' });
+        const json = await response.json();
+        this.planets = json;
+        this.loading = false;
+        console.log(this.planets)
+      }
+      async connectedCallback() {
+        this.shadowRoot.addEventListener("click", (event) => {
+          const name = event.srcElement.name;
+          if (this[name]) {
+            this[name]();
+          }
+        });
+        await this.fetchPlanets("https://api.github.com/users/Loleus/repos");
+        console.log(this.shadowRoot)
+      }
+      disconnectedCallback() {
+      }
+      attributeChangedCallback(attrName, oldVal, newVal) {
+        this.render();
+      }
+      render() {
+        if (this.loading) {
+          this.shadowRoot.innerHTML = `Loading...`;
+        } else {
+          this.shadowRoot.innerHTML = `
+          <span>
+            <p>Łukasz Kamiński</p>
+            <h3><slot name="title">Fantastic ${this.planets.length} projects</slot></h3>
+            <table style="margin: 0 auto">
+              <tr>
+                <th>Name</th>
+                <th>id</th>
+                <th>link</th>
+                <th>language</th>
+              </tr>
+              ${this.planets.map(planet => {
+            return `
+                <tr>
+                <td>${planet.name}</td>
+                <td>${planet.id}</td>
+                <td><a style="text-decoration:none; color:gold;" target="_blank" href="https://loleus.github.io/${planet.name}">link</a></td>
+                <td>${planet.language}</td>
+              </tr>
+                `
+          }).join("")}
+            </table>
+          </span>
+        `;
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
