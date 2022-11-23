@@ -13,7 +13,13 @@
       font-family: 'Barlow', sans-serif;
       font-size: 20px;
     }
-
+    @media only screen and (max-width: 700px) {
+      * {
+      color: beige;
+      text-align: center;
+      font-family: 'Barlow', sans-serif;
+      font-size: 14px;
+    }
     @font-face {
       font-family: Barlow;
       src: url(/assets/fonts/Barlow/Barlow-Regular.ttf);
@@ -22,7 +28,6 @@
     body {
       min-height: 100vh;
       background: rgb(32, 35, 41) url("./assets/bcg.jpg") center no-repeat;
-      overflow-y: scroll;
     }
     body:before {
     content: "";
