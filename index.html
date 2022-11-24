@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Repos</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      color: beige;
+      text-align: center;
+      font-family: 'Barlow', sans-serif;
+      font-size: 22px;
+    }
+    @media only screen and (max-width: 700px) {
+      * {
+      font-family: 'Barlow', sans-serif;
+      font-size: 16px;
+    }
+    } 
+    @font-face {
+      font-family: Barlow;
+      src: url(/assets/fonts/Barlow/Barlow-Regular.ttf);
+    }
+
+    body {
+      height: 100vh;
+      background: rgb(32, 35, 41) url("./assets/bcg.jpg") center no-repeat;
+      overflow: hidden;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <my-repos>
+  </my-repos>
+
+  <script>
+    customElements.define("my-repos", class extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+      }
+      static get observedAttributes() { return ["loading", "repos"]; }
+      get loading() {
+        return JSON.parse(this.getAttribute("loading"));
+      }
+      set loading(v) {
+        this.setAttribute("loading", JSON.stringify(v));
+      }
+      async fetchrepos(url) {
+        this.loading = true;
+        const response = await fetch(url, { mode: 'cors' });
+        const json = await response.json();
+        this.reps = json;
+        this.loading = false;
+        console.log(this.reps)
+      }
+      async connectedCallback() {
+        this.shadowRoot.addEventListener("click", (event) => {
+          const name = event.srcElement.name;
+          if (this[name]) {
+            this[name]();
+          }
+        });
+        await this.fetchrepos("https://api.github.com/users/Loleus/repos");
+        console.log(this.shadowRoot)
+      }
+      disconnectedCallback() {
+      }
+      attributeChangedCallback(attrName, oldVal, newVal) {
+        this.render();
+      }
+      render() {
+        let i = 1;
+        if (this.loading) {
+          this.shadowRoot.innerHTML = `Loading...`;
+        } else {
+          this.shadowRoot.innerHTML = `
+          <style>
+            span {
+              display: flex;
+              flex-flow: column;
+              height:100%:
+              overflow-y:scroll;
+              padding-bottom:12px;
+            }
+            table {
+              cellspacing:0;
+              cellpadding:0;
+              margin: 10px auto 0;
+              background:#3338;
+              padding:0 2px 2px;
+              border-radius:5px;
+            }
+            th,td {
+              margin:0;
+              padding:0 3px 5px;
+            }
+            h1 {
+              margin:0;
+              padding: 0;
+              line-height:1.6em;
+            }
+          </style>
+          <span class="span">
+            <h1><slot name="title">
+              <a style="text-underline-position: under;color:gold;" href="mailto:07zglossie@wp.pl?subject=aboutCode">
+                07zglossie@wp.pl
+            </a></slot></h1>
+            <table>
+              <tr style="color:#7285ac;background:#1118;border-color:#1118">
+                <th>No</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>www</th>
+                <th>Language</th>
+              </tr>
+              ${this.reps.map(repo => {
+            if (repo.name != "loleus.github.io") {
+              return `
+              <tr>
+                <td>${i++}</td>
+                <td>${repo.name.toUpperCase()}</td>
+                <td style="color:grey">${repo.description}</td>
+                <td><a style="text-underline-position: under;color:gold;" target="_blank" href="https://loleus.github.io/${repo.name}">link</a></td>
+                <td>${repo.language}</td>
+              </tr>
+                `
+            }
+          }).join("")}
+            </table>
+          </span>
+        `;
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
