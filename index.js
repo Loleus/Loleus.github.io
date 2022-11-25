@@ -40,28 +40,7 @@ customElements.define("my-repos", class extends HTMLElement {
         } else {
             this.shadowRoot.innerHTML = `
         <style>
-          span {
-            display: flex;
-            flex-flow: column;
-            height:100%;
-            overflow-y:scroll;
-            padding-bottom:12px;
-          }
-          table {
-            margin: 10px auto 0;
-            background:#3338;
-            padding:0 2px;
-            border-radius:5px;
-          }
-          th,td {
-            margin:0;
-            padding:2px 3px 4px;
-          }
-          h1 {
-            margin:0;
-            padding: 0;
-            line-height:1.6em;
-          }
+        @import "table.css";
         </style>
 
         <span class="span">
