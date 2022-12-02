@@ -12,17 +12,31 @@ table {
   border-radius: 5px;
 }
 tr, th, td {
-  color: grey;
+  color: rgb(122, 122, 136);
   margin: 0;
   padding: 2px 3px 4px;
 }
 h1 {
   margin: 0;
   padding: 0;
-  line-height: 1.6em;
-  color: #fff8;
+  margin-top: 4px;
+  color: rgb(107, 157, 163);
+  text-decoration-color: #526572;
+
 }
 .link {
   text-underline-position: under;
   color: gold;
+
+}
+h1 a {
+  line-height: 2rem;
+  display:inline-block;
+  color: inherit;
+  text-decoration-color: inherit;
+  background: rgba(45, 65, 73, 0.6);
+  text-decoration-line: underline;
+  font-size: 2rem;
+  text-underline-position:below;
+  border-top:2px solid #526572 ;
 }

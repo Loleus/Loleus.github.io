@@ -1,32 +1,41 @@
 customElements.define("my-repos", class extends HTMLElement {
+
+  static get observedAttributes() { return ["loading"]; }
+
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
   }
-  static get observedAttributes() { return ["loading"]; }
+
   get loading() {
     return JSON.parse(this.getAttribute("loading"));
   }
+
   set loading(v) {
     this.setAttribute("loading", JSON.stringify(v));
   }
-  async fetchrepos(url) {
+
+  async getRepos(url) {
     this.loading = true;
     const response = await fetch(url, { mode: 'cors' });
     const json = await response.json();
     this.reps = json;
     this.loading = false;
   }
+
   async connectedCallback() {
     this.shadowRoot.addEventListener("click", (e) => {
       console.log(e.target)
     });
-    await this.fetchrepos("https://api.github.com/users/Loleus/repos");
+    await this.getRepos("https://api.github.com/users/Loleus/repos");
   }
-  disconnectedCallback() {}
+
+  disconnectedCallback() { }
+
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.render();
   }
+
   render() {
     let i = 1;
     if (this.loading) {
@@ -37,10 +46,11 @@ customElements.define("my-repos", class extends HTMLElement {
         @import "table.css";
         </style>
         <span class="span">
-          <h1><slot name="title">
-            <a class="link" style="color:inherit;" href="mailto:07zglossie@wp.pl?subject=aboutCode">
+          <h1>
+            <a href="mailto:07zglossie@wp.pl?subject=aboutCode">
               07zglossie@wp.pl
-          </a></slot></h1>
+            </a>
+          </h1>
           <table>
             <tr style="background:#1118">
               <th>No</th>
