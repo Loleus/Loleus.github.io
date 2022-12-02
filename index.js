@@ -3,7 +3,7 @@ customElements.define("my-repos", class extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
   }
-  static get observedAttributes() { return ["loading", "repos"]; }
+  static get observedAttributes() { return ["loading"]; }
   get loading() {
     return JSON.parse(this.getAttribute("loading"));
   }
@@ -23,8 +23,7 @@ customElements.define("my-repos", class extends HTMLElement {
     });
     await this.fetchrepos("https://api.github.com/users/Loleus/repos");
   }
-  disconnectedCallback() {
-  }
+  disconnectedCallback() {}
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.render();
   }
