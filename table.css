@@ -11,7 +11,8 @@ span {
     padding:0 2px;
     border-radius:5px;
   }
-  th,td {
+  tr,th,td {
+    color:grey;
     margin:0;
     padding:2px 3px 4px;
   }
@@ -19,4 +20,9 @@ span {
     margin:0;
     padding: 0;
     line-height:1.6em;
+    color: #fff8;
+  }
+  .link {
+    text-underline-position:under;
+    color:gold;
   }
