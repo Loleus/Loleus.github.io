@@ -28,9 +28,9 @@ th,td {
 }
 
 h1 {
-  margin: 0;
+  margin: 10px 0 0 0;
   padding: 0;
-  color: rgb(170, 141, 12);
+  color: rgba(199, 133, 10, 0.5);
 }
 .link {
   text-underline-position: under;
@@ -41,5 +41,5 @@ h1 a {
   display:inline-block;
   color: inherit;
   font-size: 2rem;
-  text-shadow: 2px 1px 2px gold;
+  text-shadow: 1px 1px 1px gold;
 }
