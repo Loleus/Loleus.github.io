@@ -2,41 +2,44 @@ span {
   display: flex;
   flex-flow: column;
   height: 100%;
-  overflow-y: scroll;
+  overflow: hidden auto;
   padding-bottom: 12px;
 }
 table {
-  margin: 10px auto 0;
-  background: #3338;
-  padding: 0 2px;
+  margin: 13px auto 10px;
   border-radius: 5px;
+  border: 3px solid #272827;
 }
 tr, th, td {
-  color: rgb(122, 122, 136);
   margin: 0;
   padding: 2px 3px 4px;
+  text-shadow: 1px 2px 2px #0c2e46;
 }
+tbody {
+  background: #333b;
+}
+tr th {
+  color: rgb(165, 165, 165);
+  box-shadow: 0px 0px 2px 0 rgb(204, 11, 11);
+}
+th,td {
+  color: rgb(107, 157, 163);
+  box-shadow: 0px 0px 2px 0 rgb(179, 126, 14);
+}
+
 h1 {
   margin: 0;
   padding: 0;
-  margin-top: 4px;
-  color: rgb(107, 157, 163);
-  text-decoration-color: #526572;
-
+  color: rgb(170, 141, 12);
 }
 .link {
   text-underline-position: under;
   color: gold;
-
 }
 h1 a {
   line-height: 2rem;
   display:inline-block;
   color: inherit;
-  text-decoration-color: inherit;
-  background: rgba(45, 65, 73, 0.6);
-  text-decoration-line: underline;
   font-size: 2rem;
-  text-underline-position:below;
-  border-top:2px solid #526572 ;
+  text-shadow: 2px 1px 2px gold;
 }

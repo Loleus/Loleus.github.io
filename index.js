@@ -20,7 +20,7 @@ customElements.define("my-repos", class extends HTMLElement {
     const response = await fetch(url, { mode: 'cors' });
     const json = await response.json();
     this.reps = json;
-    this.loading = false;
+    this.loading = false;rgbrgb(167, 121, 21)
   }
 
   async connectedCallback() {
