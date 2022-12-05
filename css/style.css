@@ -9,21 +9,19 @@
   font-family: "Barlow", sans-serif;
   font-size: 24px;
 }
-
-@font-face {
-  font-family: Barlow;
-  src: url(/assets/fonts/Barlow/Barlow-Regular.ttf);
-}
-
-body {
-  height: 100vh;
-  background: rgb(42, 42, 43) url("./assets/bcg.jpg") center no-repeat;
-  overflow: hidden;
-  background-size: cover;
-}
-
 @media only screen and (max-width: 700px) {
   * {
     font-size: 17px;
   }
+}
+@font-face {
+  font-family: Barlow;
+  src: url(../assets/fonts/Barlow/Barlow-Regular.ttf);
+}
+html {
+  height: 100%;
+}
+body {
+  background: rgb(42, 42, 43) url("../assets/bcg.jpg") center no-repeat;
+  background-size: cover;
 }

@@ -43,7 +43,7 @@ customElements.define("my-repos", class extends HTMLElement {
     } else {
       this.shadowRoot.innerHTML = `
         <style>
-        @import "table.css";
+        @import "components/repos/style.css";
         </style>
         <span class="span">
           <h1>
