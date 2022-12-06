@@ -46,9 +46,9 @@ customElements.define("my-repos", class extends HTMLElement {
         @import "components/repos/style.css";
         </style>
         <span class="span">
-          <h1>
+          <h1>Feel free to
             <a href="mailto:07zglossie@wp.pl?subject=aboutCode">
-              07zglossie@wp.pl
+              mail me.
             </a>
           </h1>
           <table>
