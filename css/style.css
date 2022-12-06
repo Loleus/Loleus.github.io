@@ -1,5 +1,5 @@
 :root {
-  --mainTxtCol: beige;
+  --mainTxtCol: rgb(224, 224, 206);
 }
 * {
   padding: 0;
@@ -7,11 +7,11 @@
   color: var(--mainTxtCol);
   text-align: center;
   font-family: "Barlow", sans-serif;
-  font-size: 24px;
+  font-size: 28px;
 }
 @media only screen and (max-width: 700px) {
   * {
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 @font-face {
