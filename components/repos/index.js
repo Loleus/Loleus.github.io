@@ -56,7 +56,6 @@ customElements.define("my-repos", class extends HTMLElement {
               <th>No</th>
               <th>Name</th>
               <th>Type</th>
-              <th>www</th>
               <th>Language</th>
             </tr>
             ${this.reps.map(repo => {
@@ -64,9 +63,8 @@ customElements.define("my-repos", class extends HTMLElement {
           return `
             <tr>
               <td style="background:#1118" >${i++}</td>
-              <td style="color:var(--mainTxtCol)">${repo.name.toUpperCase()}</td>
+              <td><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name.toUpperCase()}</a></td>
               <td>${repo.description}</td>
-              <td><a class="link" target="_blank" href="https://loleus.github.io/${repo.name}">link</a></td>
               <td style="color:var(--mainTxtCol)">${repo.language}</td>
             </tr>
               `
