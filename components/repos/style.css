@@ -29,13 +29,15 @@ h1 {
   margin: 10px 0 0 0;
   padding: 0;
   color: rgba(255, 167, 4, 0.5);
+  line-height: 1.3em;
+  font-size: 1.8em;
 }
 h1 a {
   text-underline-position: under;
-  line-height: 2rem;
+  /* line-height: 2rem; */
   display:inline-block;
   color: inherit;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   text-shadow: 2px 2px 1px #272727;
   color: rgba(255, 167, 4, 1 );
 }
