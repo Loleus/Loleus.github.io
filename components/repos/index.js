@@ -20,7 +20,7 @@ customElements.define("my-repos", class extends HTMLElement {
     const response = await fetch(url, { mode: 'cors' });
     const json = await response.json();
     this.reps = json;
-    this.loading = false;rgbrgb(167, 121, 21)
+    this.loading = false;
   }
 
   async connectedCallback() {
@@ -42,9 +42,7 @@ customElements.define("my-repos", class extends HTMLElement {
       this.shadowRoot.innerHTML = `Loading...`;
     } else {
       this.shadowRoot.innerHTML = `
-        <style>
-        @import "components/repos/style.css";
-        </style>
+      <link rel="stylesheet" href="./components/repos/style.css">
         <span class="span">
           <h1>Feel free to
             <a href="mailto:07zglossie@wp.pl?subject=aboutCode">
