@@ -1,7 +1,5 @@
 customElements.define("my-info", class extends HTMLElement {
-
   static get observedAttributes() { return ["visibility"]; }
-
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -9,25 +7,19 @@ customElements.define("my-info", class extends HTMLElement {
   get visibility() {
     return JSON.parse(this.getAttribute("visibility"));
   }
-
   set visibility(v) {
     this.setAttribute("visibility", JSON.stringify(v));
   }
-
-
   async connectedCallback() {
     this.shadowRoot.addEventListener("click", (e) => {
       this.visibility = !this.visibility
     });
   this.visibility = false
   }
-
   disconnectedCallback() { }
-
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.render(attrName,oldVal, newVal);
   }
-
   render(prop, oldVal, newVal) {
     if (this.visibility) {
       this.shadowRoot.innerHTML = `
@@ -46,9 +38,8 @@ customElements.define("my-info", class extends HTMLElement {
       `;
     } else {
       this.shadowRoot.innerHTML = `
-      <button style="padding:4px 16px;">About Me</button>
+      <button style="cursor:pointer;font-size:0.7em;box-shadow: 0px 0px 2px 0 rgb(204, 11, 11);border:none;background:#333b;color:#a5a5a5;padding:4px 16px;">About Me</button>
       `;
     }
-
   }
 });

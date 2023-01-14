@@ -47,13 +47,13 @@
   border-radius: 50%;
   border: 2px solid rgb(102, 131, 138);
 }
-@media only screen and (max-width: 401px) {
+@media only screen and (max-width: 700px) {
   .container {
     position: absolute;
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     transform: translate(0, 0);
   }
   .container .content p {
