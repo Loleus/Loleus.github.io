@@ -71,7 +71,8 @@ customElements.define("my-info", class extends HTMLElement {
       `;
     } else {
       this.shadowRoot.innerHTML = `
-      <button style="cursor:pointer;font-size:0.7em;box-shadow: 0px 0px 2px 0 rgb(204, 11, 11);border:none;background:#333b;color:#a5a5a5;padding:4px 16px;">About Me</button>
+      <link rel="stylesheet" href="./components/info/style.css">
+      <button style="padding:4px 16px;">About Me</button>
       `;
     }
 
