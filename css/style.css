@@ -15,7 +15,7 @@
       -ms-user-select: none;
           user-select: none;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and  (max-width: 480px) {
   * {
     font-size: 20px;
   }
@@ -29,6 +29,5 @@ html {
 }
 body {
   background: rgb(42, 42, 43) url("../assets/bcg.jpg") center no-repeat;
-  background-size: cover;
-  overflow-x: hidden;
+  background-size: 100% cover;
 }
