@@ -50,7 +50,7 @@ customElements.define("my-repos", class extends HTMLElement {
             </a>
           </h1>
           <table>
-            <tr style="background:#1118">
+            <tr>
               <th>No</th>
               <th>Name</th>
               <th>Type</th>
@@ -63,7 +63,7 @@ customElements.define("my-repos", class extends HTMLElement {
               <td style="background:#1118" >${i++}</td>
               <td><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name.toUpperCase()}</a></td>
               <td>${repo.description}</td>
-              <td style="color:var(--mainTxtCol)">${repo.language}</td>
+              <td style="color:lightgray">${repo.language}</td>
             </tr>
               `
         }
