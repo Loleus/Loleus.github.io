@@ -8,21 +8,29 @@ table {
   margin: 13px auto;
   border-radius: 5px;
 }
-tr, th, td {
+tr,
+th,
+td {
   margin: 0;
   padding: 3px 6px 7px;
   text-shadow: 2px 2px 2px #272727;
 }
 tbody {
-  background: #333c;
+  /* background: #333c; */
 }
 tr th {
+  background: #1118;
+  border-radius: 0.5em;
+  overflow: hidden;
   color: rgb(165, 165, 165);
   box-shadow: 0px 0px 2px 1px rgb(204, 11, 11);
 }
-th,td {
+th,
+td {
+  border-radius: 0.5em;
   color: #a5a5a5;
   box-shadow: 0px 0px 3px 1px #b37e0e;
+  background: #18511382;
 }
 h1 {
   margin: 10px 0 0 0;
@@ -34,7 +42,7 @@ h1 {
 }
 h1 a {
   text-underline-position: under;
-  display:inline-block;
+  display: inline-block;
   color: inherit;
   text-shadow: 1px 2px 1px #272727;
   color: rgb(177, 132, 50);
