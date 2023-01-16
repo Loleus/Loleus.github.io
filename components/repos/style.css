@@ -12,18 +12,18 @@ tr,
 th,
 td {
   margin: 0;
-  padding: 3px 6px 7px;
+  padding: 3px 7px 9px;
   text-shadow: 2px 2px 2px #272727;
 }
 tbody {
-  /* background: #333c; */
+  background: rgba(255, 153, 0, 0.185);
 }
 tr th {
   background: #1118;
   border-radius: 0.5em;
   overflow: hidden;
   color: rgb(165, 165, 165);
-  box-shadow: 0px 0px 2px 1px rgb(204, 11, 11);
+  box-shadow: 0px 0px 3px 1px rgb(204, 11, 11);
 }
 th,
 td {
@@ -49,5 +49,6 @@ h1 a {
 }
 td a {
   font-weight: bold;
-  color: rgb(199, 140, 30);
+  color: rgb(214, 178, 18);
+  text-underline-position: under;
 }
