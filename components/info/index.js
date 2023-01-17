@@ -40,7 +40,7 @@ customElements.define("my-info", class extends HTMLElement {
       `;
     } else {
       this.shadowRoot.innerHTML = `
-      <button style="border-radius:0.5em;margin:0.5em 0;cursor:pointer;font-size:0.9em;box-shadow: 1px 1px 2px 0px rgb(204, 11, 11);border:none;background:#333b;color:#a5a5a5;padding:3px 16px 6px;">About Me</button>
+      <button style="border-radius:0.5em;margin:0.5em 0;cursor:pointer;font-size:0.9em;box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);border:none;background:#333b;color:#a5a5a5;padding:3px 16px 6px;">About Me</button>
       `;
     }
   }

@@ -23,13 +23,13 @@ tr th {
   border-radius: 0.5em;
   overflow: hidden;
   color: rgb(165, 165, 165);
-  box-shadow: 1px 1px 1px 0px rgb(204, 11, 11);
+  box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
 }
 th,
 td {
   border-radius: 0.5em;
   color: #a5a5a5;
-  box-shadow: 1px 1px 1px 0px #b37e0e;
+  box-shadow: 0px 0px 3px 0px #b37e0e;
   background: rgba(12, 75, 5, 0.5);
 }
 h1 {
