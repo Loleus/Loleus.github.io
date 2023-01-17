@@ -13,6 +13,7 @@ customElements.define("my-info", class extends HTMLElement {
   async connectedCallback() {
     this.shadowRoot.addEventListener("click", (e) => {
       this.visibility = !this.visibility
+      window.scrollTo(0, 0);
     });
   this.visibility = false
   }
@@ -32,14 +33,14 @@ customElements.define("my-info", class extends HTMLElement {
           Hi, here Łukasz Kamiński aka Lolo.
           I'm passionate about programming web aplications, and taking pictures. I have been a CNC operator for several years. Previous occupations: beatmaker, graphic designer, sound engineer, photo editor,
           DTP, accountant, warehouseman, wire harness fitter.
-          The current technology stack: JavaScript, WebComponents,  NodeJS, ExpressJS, Postman, Sql/noSql. (C=) Amiga RULES! (C=)
+          The current technology stack: JavaScript, Web Components,  NodeJS, ExpressJS, Postman, Sql/noSql. (C=) Amiga RULES! (C=)
         </p>
       </article>
     </section>
       `;
     } else {
       this.shadowRoot.innerHTML = `
-      <button style="border-radius:0.5em;margin:0.5em 0;cursor:pointer;font-size:0.9em;box-shadow: 0px 0px 2px 1px rgb(204, 11, 11);border:none;background:#333b;color:#a5a5a5;padding:3px 16px 6px;">About Me</button>
+      <button style="border-radius:0.5em;margin:0.5em 0;cursor:pointer;font-size:0.9em;box-shadow: 1px 1px 2px 0px rgb(204, 11, 11);border:none;background:#333b;color:#a5a5a5;padding:3px 16px 6px;">About Me</button>
       `;
     }
   }
