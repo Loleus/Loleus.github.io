@@ -1,25 +1,18 @@
-:root {
-  --mainTxtCol: rgb(224, 224, 206);
-}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: var(--mainTxtCol);
+  color: rgb(224, 224, 206);
   text-align: center;
   font-family: "Barlow", sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-@media only screen and  (max-width: 480px) {
-  * {
-    font-size: 20px;
-  }
-}
+
 @font-face {
   font-family: Barlow;
   src: url(../assets/fonts/Barlow/Barlow-Regular.ttf);
