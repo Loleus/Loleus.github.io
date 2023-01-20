@@ -55,6 +55,7 @@ button {
   background: #333b;
   color: #a5a5a5;
   padding: 5px 16px 7px;
+  margin-bottom:0.2em;
 }
 @media only screen and (max-width: 1020px) {
   .container {

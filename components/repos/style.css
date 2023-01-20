@@ -35,11 +35,12 @@ td {
 h1 {
   margin: 10px 0 0 0;
   padding: 0 0 5px;
-  color: rgba(255, 167, 4, 0.5);
+  color: #ffa70480;
   line-height: 1.3em;
   font-size: 1.3em;
   text-shadow: 1px 2px 1px #272727;
-  background:#27272780
+  background:#85560038;
+  /* background:#27272780; */
 }
 h1 a {
   text-underline-position: under;
