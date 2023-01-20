@@ -62,7 +62,7 @@ customElements.define("my-repos", class extends HTMLElement {
         if (repo.name != "loleus.github.io") {
           return `
             <tr>
-              <td style="background:#1118" >${i++}</td>
+              <td style="background:#1118; box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);">${i++}</td>
               <td><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name.toUpperCase()}</a></td>
               <td>${repo.description}</td>
               <td style="color:lightgray">${repo.language}</td>

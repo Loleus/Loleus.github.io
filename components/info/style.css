@@ -50,10 +50,10 @@ button {
   border-radius: 0.5em;
   cursor: pointer;
   font-size: 0.6em;
-  box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
+  box-shadow: 0px 0px 3px 0px #b37e0e;
   border: none;
   background: #333b;
-  color: #a5a5a5;
+  color: #ffedd8;
   padding: 5px 16px 7px;
   margin-bottom:0.2em;
 }
@@ -70,5 +70,10 @@ button {
   .container .content p {
     font-size: 1.1em;
     line-height: 1.22em;
+  }
+  tr,
+  th,
+  td {
+    padding: 3px 5px 9px;
   }
 }

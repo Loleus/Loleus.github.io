@@ -12,7 +12,7 @@ tr,
 th,
 td {
   margin: 0;
-  padding: 3px 7px 9px;
+  padding: 5px 7px 10px;
   text-shadow: 2px 2px 2px #272727;
 }
 /* tbody {
@@ -20,7 +20,7 @@ td {
 } */
 tr th {
   background: hsla(0, 0%, 7%, 0.533);
-  border-radius: 0.5em;
+  border-radius: 0.33em;
   overflow: hidden;
   color: rgb(165, 165, 165);
   box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
@@ -39,15 +39,15 @@ h1 {
   line-height: 1.3em;
   font-size: 1.3em;
   text-shadow: 1px 2px 1px #272727;
-  background:#85560038;
-  /* background:#27272780; */
+  background:#53360054;
+  box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
 }
 h1 a {
   text-underline-position: under;
   display: inline-block;
   color: inherit;
   text-shadow: 1px 2px 1px #272727;
-  color: rgb(177, 132, 50);
+  color: rgb(214, 178, 18);
 
 }
 td a {
