@@ -21,6 +21,7 @@ html {
   height: 100%;
 }
 body {
+  /* background: rgb(42, 42, 43) url("https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/318302216_10218055647021481_563261147423064518_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=gwh8qiWeTIUAX-loyxx&_nc_ht=scontent-waw1-1.xx&oh=00_AfCGMBRrOEQ2Q1VEfqhAJj154Sr_TMh1ycfKJgt_5vRLQw&oe=63CDA263") center no-repeat; */
   background: rgb(42, 42, 43) url("../assets/bcg.jpg") center no-repeat;
   background-size: 100% cover;
 }

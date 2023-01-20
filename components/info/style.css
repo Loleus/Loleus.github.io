@@ -8,7 +8,6 @@
   height: auto;
   backdrop-filter: blur(6px);
   z-index: 2;
-  /* padding: 0 0.67em 0.67em; */
   display: block;
   position: absolute;
   left: 50%;
@@ -31,7 +30,7 @@
   text-indent: 1em;
   text-align: justify;
   text-justify: auto;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.2em;
   margin: 0 auto;
   padding: 0.7em;
@@ -47,6 +46,16 @@
   margin: 1em 0;
   border-radius: 50%;
 }
+button {
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 0.6em;
+  box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
+  border: none;
+  background: #333b;
+  color: #a5a5a5;
+  padding: 5px 16px 7px;
+}
 @media only screen and (max-width: 1020px) {
   .container {
     position: absolute;
@@ -58,8 +67,7 @@
     transform: translate(0, 0);
   }
   .container .content p {
-    font-size: 1.2em;
-    line-height: 1.2em;
+    font-size: 1.1em;
+    line-height: 1.22em;
   }
 }
-
