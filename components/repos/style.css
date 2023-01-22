@@ -24,12 +24,12 @@ tr th {
   background: hsla(0, 0%, 7%, 0.533);
   border-radius: 0.33em;
   overflow: hidden;
-  font-size: 0.8em;
   color: rgb(165, 165, 165);
   box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
 }
 th,
 td {
+  font-size: 0.8em;
   border-radius: 0.5em;
   color: #a5a5a5;
   box-shadow: 0px 0px 3px 0px #b37e0e;
@@ -37,26 +37,25 @@ td {
 }
 h1 {
   margin: 1.3vw 0;
-  padding: 0 0 4px;
+  padding: .3em 0 .5em;
   color: #ffa70480;
-  line-height: 1.3em;
-  font-size: 1.2em;
-  text-shadow: 1px 2px 1px #272727;
+  line-height: 1em;
+  font-size: 1em;
+  text-shadow: 1px 1px 2px #272727;
   background-image:linear-gradient(to left,#fff0,#53360080 50%,#fff0);
   box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
 }
 h1 a {
-  /* text-underline-position: under; */
   text-decoration: none;
   display: inline-block;
-  color: inherit;
   text-shadow: 1px 2px 1px #272727;
-  color: rgb(214, 178, 18);
+  color: #d6b212;
 
 }
 td a {
   font-weight: bold;
   color: #b8cc00;
+  font-size: 1.1em;
   text-underline-position: under;
   text-decoration: none;
 }
