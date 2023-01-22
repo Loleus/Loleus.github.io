@@ -2,7 +2,9 @@ span {
   display: flex;
   flex-flow: column;
   height: 100%;
+  min-height: 100vh;
   overflow: auto;
+  justify-content: center;
 }
 table {
   margin: 13px auto;
@@ -12,7 +14,7 @@ tr,
 th,
 td {
   margin: 0;
-  padding: 5px 7px 10px;
+  padding: 5px 7px 8px;
   text-shadow: 2px 2px 2px #272727;
 }
 /* tbody {
@@ -22,6 +24,7 @@ tr th {
   background: hsla(0, 0%, 7%, 0.533);
   border-radius: 0.33em;
   overflow: hidden;
+  font-size: 0.8em;
   color: rgb(165, 165, 165);
   box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
 }
@@ -30,20 +33,21 @@ td {
   border-radius: 0.5em;
   color: #a5a5a5;
   box-shadow: 0px 0px 3px 0px #b37e0e;
-  background: rgba(12, 75, 5, 0.5);
+  background: rgba(12, 75, 5, 0.377);
 }
 h1 {
-  margin: 10px 0 0 0;
-  padding: 0 0 5px;
+  margin: 1.3vw 0;
+  padding: 0 0 4px;
   color: #ffa70480;
   line-height: 1.3em;
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-shadow: 1px 2px 1px #272727;
-  background:#53360054;
+  background-image:linear-gradient(to left,#fff0,#53360080 50%,#fff0);
   box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
 }
 h1 a {
-  text-underline-position: under;
+  /* text-underline-position: under; */
+  text-decoration: none;
   display: inline-block;
   color: inherit;
   text-shadow: 1px 2px 1px #272727;
@@ -52,6 +56,7 @@ h1 a {
 }
 td a {
   font-weight: bold;
-  color: rgb(214, 178, 18);
+  color: #b8cc00;
   text-underline-position: under;
+  text-decoration: none;
 }
