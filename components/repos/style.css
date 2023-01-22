@@ -29,11 +29,15 @@ tr th {
 }
 th,
 td {
+  pointer-events: none;
   font-size: 0.8em;
   border-radius: 0.5em;
   color: #a5a5a5;
   box-shadow: 0px 0px 3px 0px #b37e0e;
   background: rgba(12, 75, 5, 0.377);
+}
+td:hover {
+  box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
 }
 h1 {
   margin: 1.3vw 0;
@@ -43,19 +47,25 @@ h1 {
   font-size: 1em;
   text-shadow: 1px 1px 2px #272727;
   background-image:linear-gradient(to left,#fff0,#53360080 50%,#fff0);
-  box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
+  box-shadow: 0px 0px 3px 0px #cc0b0b;
 }
 h1 a {
   text-decoration: none;
   display: inline-block;
   text-shadow: 1px 2px 1px #272727;
   color: #d6b212;
-
+}
+h1 a:hover {
+  color: #06ad00;
 }
 td a {
+  pointer-events: auto;
   font-weight: bold;
   color: #b8cc00;
   font-size: 1.1em;
   text-underline-position: under;
   text-decoration: none;
+}
+td a:hover {
+  color: #d6b212;
 }
