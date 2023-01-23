@@ -76,7 +76,7 @@ button:hover {
     transform: translate(0, 0);
   }
   .container .content p {
-    font-size: 1.1em;
-    line-height: 1.22em;
+    font-size: 1em;
+    line-height: 1.1em;
   }
 }
