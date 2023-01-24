@@ -9,28 +9,21 @@ span {
 table {
   margin: 13px auto;
 }
-/* tr,
-th,
-td {
-  margin: 0;
-  padding: 5px 7px 8px;
-  text-shadow: 2px 2px 2px #272727;
-} */
-/* tbody {
-  background: rgba(255, 153, 0, 0.185);
-} */
-
 th,
 td {
   padding: 5px 7px 9px;
   text-shadow: 2px 2px 2px #272727;
   pointer-events: none;
   font-size: 0.6em;
-  border-radius: .5em;
+  border-radius: 0.5em;
   color: #a5a5a5;
   box-shadow: 0px 0px 3px 0px #b37e0e;
   background: rgba(12, 75, 5, 0.377);
-  transition: all .24s linear;
+  transition: all 0.24s linear;
+}
+tr:nth-child(n + 1) td:first-child {
+  background: #1118;
+  box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
 }
 td:hover {
   box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
@@ -44,14 +37,14 @@ tr th {
 h1 {
   pointer-events: none;
   margin: 4vh 0;
-  padding: .3em 0 .5em;
+  padding: 0.3em 0 0.5em;
   color: #ffa70480;
   line-height: 1.2em;
   font-size: 1em;
   text-shadow: 1px 1px 2px #272727;
-  background-image:linear-gradient(to left,#fff0,#53360080 50%,#fff0);
+  background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
   box-shadow: 0px 0px 3px 0px #cc0b0b;
-  transition: color .24s linear;
+  transition: color 0.24s linear;
 }
 h1:hover {
   color: #b99700;
@@ -73,9 +66,8 @@ td a {
   font-size: 1.3em;
   text-underline-position: under;
   text-decoration: none;
-  transition: color .17s linear;
+  transition: color 0.17s linear;
 }
 td a:hover {
   color: #eccb5c;
 }
-

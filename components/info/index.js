@@ -28,7 +28,7 @@ customElements.define("my-info", class extends HTMLElement {
       <link rel="stylesheet" href="./components/info/style.css">
       <section class="container">
       <article id="content" class="content">
-        <img class="logo" src="/assets/me.jpg" alt="me">
+        <img class="logo" src="./assets/me.jpg" alt="me">
         <p>
           Hi, here Łukasz Kamiński aka Lolo.
           I'm passionate about programming web aplications, and taking pictures. I have been a CNC operator for several years. Previous occupations: beatmaker, graphic designer, sound engineer, photo editor,
