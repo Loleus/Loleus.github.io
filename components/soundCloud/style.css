@@ -1,0 +1,83 @@
+:root {
+  --borderColor: #d86e18;
+}
+.container {
+  pointer-events: auto;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  z-index: 2;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  overflow: hidden;
+  border-radius: 1em;
+  background: #5a2b045b;
+  font-size: 20px;
+}
+.container .content {
+  margin: 0 auto;
+  width: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .content p {
+  text-shadow: 2px 2px 0px #301e0c;
+  text-indent: 1em;
+  text-align: justify;
+  text-justify: auto;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin: 0 auto;
+  padding: 0.7em;
+  padding-top: 0;
+  color: #ffedd8;
+  border-radius: 1em;
+}
+.container .content img {
+  box-shadow: 1px 1px 3px 0 #181818;
+  width: 260px;
+  height: 260px;
+  padding: 0;
+  margin: 1em 0;
+  border-radius: 50%;
+}
+button {
+  pointer-events: auto;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 0.6em;
+  box-shadow: 0px 0px 3px 0px #b37e0e;
+  border: none;
+  background: #333b;
+  color: #a5a5a5;
+  padding: 5px 16px 7px;
+  text-shadow: 1px 2px 1px #272727;
+  color: #d6b212;
+  transition: box-shadow .24s linear;
+}
+button:hover {
+  box-shadow: 0px 0px 3px 0px rgb(204, 11, 11);
+  color: #8fcc00;
+}
+@media only screen and (max-width: 1020px) {
+  .container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    max-height: 100%;
+    transform: translate(0, 0);
+  }
+  .container .content p {
+    font-size: 1em;
+    line-height: 1.1em;
+  }
+}
