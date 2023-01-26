@@ -18,6 +18,7 @@
   border-radius: 1em;
   background: #5a2b045b;
   font-size: 20px;
+  cursor: pointer;
 }
 .container .content {
   position: relative;
