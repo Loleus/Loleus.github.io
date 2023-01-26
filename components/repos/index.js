@@ -76,6 +76,8 @@ customElements.define("my-repos", class extends HTMLElement {
           <h1>
           <my-info>
           </my-info>
+          <my-soundcloud>
+          </my-soundcloud>
         </h1>
         </span>
       `;

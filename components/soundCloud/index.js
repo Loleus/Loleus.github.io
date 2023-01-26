@@ -29,7 +29,7 @@ customElements.define("my-soundcloud", class extends HTMLElement {
       <section class="container">
       <article id="content" class="content">
   
-      <iframe id="sc-widget" width="100%" height="700 " scrolling="no" frameborder="no" allow="autoplay"
+      <iframe id="sc-widget" width="100%" height="700" scrolling="no" frameborder="no" allow="autoplay"
       src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/loleus/"></iframe>
     <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
     <script type="text/javascript">
