@@ -17,12 +17,13 @@
   overflow: hidden;
   background: #5a2b045b;
   font-size: 20px;
+  cursor: pointer;
 }
 #sc-widget {
   width: 100%;
-  height:100vh;
+  height: 100vh;
 }
- .container::after {
+.container::after {
   border-radius: 1em;
   cursor: pointer;
   display: block;
@@ -30,13 +31,13 @@
   content: "X";
   font-size: 4vh;
   line-height: 5.2vh;
-  color:#a5a5a5;
+  color: #a5a5a5;
   width: 6vh;
   height: 6vh;
   right: 11%;
   bottom: 1%;
-  background:#272727;
- }
+  background: #272727;
+}
 
 .container .content {
   margin: 0 auto;
@@ -62,7 +63,8 @@ button {
   padding: 5px 16px 7px;
   text-shadow: 1px 2px 1px #272727;
   color: #d6b212;
-  transition: box-shadow .24s linear;
+  transition: box-shadow 0.24s linear;
+  margin: 0 10px;
 }
 
 button:hover {
@@ -72,17 +74,18 @@ button:hover {
 
 @media only screen and (max-width: 1020px) {
   .container {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     max-height: 100%;
     transform: translate(0, 0);
+    overflow: hidden;
   }
   .container::after {
     right: 1%;
-   }
+  }
   .container .content {
     width: 100%;
     transform: translateY(0);
@@ -90,6 +93,7 @@ button:hover {
   }
   #sc-widget {
     width: 100vw;
-    height:100vh;
+    min-height: 100vh;
+    height: 100%;
   }
 }

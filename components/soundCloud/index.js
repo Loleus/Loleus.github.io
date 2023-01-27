@@ -56,12 +56,12 @@ customElements.define("my-soundcloud", class extends HTMLElement {
     </script>
       </article>
     </section>
-    <button>Music</button>
+    <button>Music Tracks</button>
       `;
     } else {
       this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="./components/soundCloud/style.css">
-      <button>Music</button>
+      <button>Music Tracks</button>
       `;
     }
   }
