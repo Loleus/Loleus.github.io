@@ -81,4 +81,7 @@ button:hover {
     font-size: 1em;
     line-height: 1.1em;
   }
+  h1 {
+    margin: 6vw 0;
+  }
 }
