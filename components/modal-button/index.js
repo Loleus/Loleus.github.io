@@ -33,12 +33,12 @@ customElements.define("my-youtube", class extends HTMLElement {
       frameborder="0"></iframe>
       </article>
     </section>
-    <button>YouTube</button>
+    <button>Music Videos</button>
       `;
     } else {
       this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="./components/modal-button/style.css">
-      <button>YouTube</button>
+      <button>Music Videos</button>
       `;
     }
   }
