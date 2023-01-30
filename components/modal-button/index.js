@@ -29,7 +29,7 @@ customElements.define("my-youtube", class extends HTMLElement {
       <section class="container">
       <article id="content" class="content">
       <iframe id="player" type="text/html" width="640" height="360"
-      src="http://www.youtube.com/embed?listType=playlist&list=PLkXJmTe_aZnZncsAHK4LgkP6kkt-ataG3"
+      src="https://www.youtube.com/embed?listType=playlist&list=PLkXJmTe_aZnZncsAHK4LgkP6kkt-ataG3"
       frameborder="0"></iframe>
       </article>
     </section>
