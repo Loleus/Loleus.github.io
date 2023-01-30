@@ -14,7 +14,7 @@ td {
   padding: 5px 7px 10px;
   text-shadow: 2px 2px 2px #272727;
   pointer-events: none;
-  font-size: 0.6em;
+  font-size: 0.6rem;
   line-height: 0.9em;
   border-radius: 0.5em;
   color: #a5a5a5;
@@ -41,7 +41,7 @@ h1 {
   padding: 0.3em 0 0.5em;
   color: #ffa70480;
   line-height: 1em;
-  font-size: 1em;
+  font-size: 0.8em;
   text-shadow: 1px 1px 2px #272727;
   background-image: linear-gradient(to left, #fff0, #53360080 50%, #fff0);
   box-shadow: 0px 0px 3px 0px #cc0b0b;
@@ -64,7 +64,7 @@ td a {
   pointer-events: auto;
   font-weight: bold;
   color: #cec6a5;
-  font-size: 1.3em;
+  font-size: 1.1em;
   text-underline-position: under;
   text-decoration: none;
   transition: color 0.17s linear;
