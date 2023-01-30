@@ -28,7 +28,9 @@ customElements.define("my-youtube", class extends HTMLElement {
       <link rel="stylesheet" href="./components/modal-button/style.css">
       <section class="container">
       <article id="content" class="content">
-      <h1>YouTube</h1>
+      <iframe id="player" type="text/html" width="640" height="360"
+      src="http://www.youtube.com/embed?listType=playlist&list=PLkXJmTe_aZnZncsAHK4LgkP6kkt-ataG3"
+      frameborder="0"></iframe>
       </article>
     </section>
     <button>YouTube</button>
