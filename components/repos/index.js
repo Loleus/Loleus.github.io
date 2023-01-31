@@ -49,6 +49,8 @@ customElements.define("my-repos", class extends HTMLElement {
       <link rel="stylesheet" href="./components/soundCloud/style.css">
       <script src="./components/modal-button/index.js"></script>
       <link rel="stylesheet" href="./components/modal-button/style.css">
+      <script src="./components/photo/index.js"></script>
+      <link rel="stylesheet" href="./components/photo/style.css">
         <span class="span">
           <h1>Feel free to
             <a href="mailto:07zglossie@wp.pl?subject=aboutCode">
@@ -82,6 +84,8 @@ customElements.define("my-repos", class extends HTMLElement {
           </my-soundcloud>
           <my-youtube>
           </my-youtube>
+          <my-photo>
+          </my-photo>
         </h1>
         </span>
       `;
