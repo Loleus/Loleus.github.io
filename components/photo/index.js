@@ -3,7 +3,17 @@ const getTemp = (vis) => {
     return `
     <link rel="stylesheet" href="./components/photo/style.css">
     <section class="container">
-      <article id="content" class="content"></article>
+      <article id="content" class="content">
+      <div id="container">
+      <header>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </header>
+      <aside>Aside</aside>
+      <main>Main</main>
+      <footer>Footer</footer>
+    </div></article>
     </section>
     <button>Photos</button>
     `
