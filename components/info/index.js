@@ -23,7 +23,6 @@ customElements.define("my-info", class extends HTMLElement {
   }
   render(prop, oldVal, newVal) {
     console.log(prop, oldVal, newVal)
-    if (this.visibility) {
       this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="./components/info/style.css">
       <section class="container">
@@ -39,11 +38,5 @@ customElements.define("my-info", class extends HTMLElement {
     </section>
     <button>About Me</button>
       `;
-    } else {
-      this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="./components/info/style.css">
-      <button>About Me</button>
-      `;
-    }
   }
 });
