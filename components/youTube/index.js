@@ -25,7 +25,7 @@ customElements.define("my-youtube", class extends HTMLElement {
     console.log(prop, oldVal, newVal)
     if (this.visibility) {
       this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="./components/modal-button/style.css">
+      <link rel="stylesheet" href="./components/youTube/style.css">
       <section class="container">
       <article id="content" class="content">
       <iframe id="player" type="text/html" width="640" height="360"
@@ -37,7 +37,7 @@ customElements.define("my-youtube", class extends HTMLElement {
       `;
     } else {
       this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="./components/modal-button/style.css">
+      <link rel="stylesheet" href="./components/youTube/style.css">
       <button>Music Videos</button>
       `;
     }
