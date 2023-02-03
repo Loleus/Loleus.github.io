@@ -23,7 +23,6 @@ customElements.define("my-youtube", class extends HTMLElement {
   }
   render(prop, oldVal, newVal) {
     console.log(prop, oldVal, newVal)
-    if (this.visibility) {
       this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="./components/youTube/style.css">
       <section class="container">
@@ -35,11 +34,5 @@ customElements.define("my-youtube", class extends HTMLElement {
     </section>
     <button>Music Videos</button>
       `;
-    } else {
-      this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="./components/youTube/style.css">
-      <button>Music Videos</button>
-      `;
-    }
   }
 });

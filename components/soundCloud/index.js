@@ -23,7 +23,7 @@ customElements.define("my-soundcloud", class extends HTMLElement {
   }
   render(prop, oldVal, newVal) {
     console.log(prop, oldVal, newVal)
-    if (this.visibility) {
+
       this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="./components/soundCloud/style.css">
       <section class="container">
@@ -56,13 +56,6 @@ customElements.define("my-soundcloud", class extends HTMLElement {
     </script>
       </article>
     </section>
-    <button>Music Tracks</button>
-      `;
-    } else {
-      this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="./components/soundCloud/style.css">
-      <button>Music Tracks</button>
-      `;
-    }
+      `
   }
 });

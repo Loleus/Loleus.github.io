@@ -6,6 +6,24 @@ const getTemp = (vis,id,text) => {
         <my-info></my-info>
         `
       }
+      if(id == "music") {
+        return `
+        <link rel="stylesheet" href="./components/soundCloud/style.css">
+        <my-soundcloud></my-soundcloud>
+        `
+      }
+      if(id == "video") {
+        return `
+        <link rel="stylesheet" href="./components/youTube/style.css">
+        <my-youtube></my-youtube>
+        `
+      }
+      if(id == "photo") {
+        return `
+        <link rel="stylesheet" href="./components/photo/style.css">
+        <my-photo></my-photo>
+        `
+      }
     } else {
       return `
       <link rel="stylesheet" href="./components/nav-button/css/style.css">
