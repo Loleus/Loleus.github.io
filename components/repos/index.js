@@ -52,7 +52,7 @@ customElements.define("my-repos", class extends HTMLElement {
       <script src="./components/photo/index.js"></script>
       <link rel="stylesheet" href="./components/photo/style.css">
       <script src="./components/nav-button/index.js"></script>
-      <link rel="stylesheet" href="./components/nav-button/style.css">
+      <link rel="stylesheet" href="./components/nav-button/css/style.css">
         <span class="span">
           <h1>Feel free to
             <a href="mailto:07zglossie@wp.pl?subject=aboutCode">
@@ -80,14 +80,10 @@ customElements.define("my-repos", class extends HTMLElement {
       }).join("")}
           </table>
           <h1>
-          <my-info>
-          </my-info>
-          <my-soundcloud>
-          </my-soundcloud>
-          <my-youtube>
-          </my-youtube>
-          <my-photo>
-          </my-photo>
+          <nav-button id="about" label-text="About Me"></nav-button>
+          <nav-button id="music" label-text="Music Tracks"></nav-button>
+          <nav-button id="video" label-text="Music Videos"></nav-button>
+          <nav-button id="photo" label-text="Photo Blog"></nav-button>
         </h1>
         </span>
       `;
