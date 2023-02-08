@@ -42,6 +42,6 @@ customElements.define("my-photo", class extends HTMLElement {
     this.render(attrName, oldVal, newVal);
   }
   render(prop, oldVal, newVal) {
-      this.shadowRoot.innerHTML = getTemp1(this.visibility);
+      this.shadowRoot.innerHTML += getTemp1(this.visibility);
   }
 });

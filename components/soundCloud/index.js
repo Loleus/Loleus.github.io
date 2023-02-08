@@ -24,7 +24,7 @@ customElements.define("my-soundcloud", class extends HTMLElement {
   render(prop, oldVal, newVal) {
     console.log(prop, oldVal, newVal)
 
-      this.shadowRoot.innerHTML = `
+      this.shadowRoot.innerHTML += `
       <link rel="stylesheet" href="./components/soundCloud/style.css">
       <section class="container">
       <article id="content" class="content">

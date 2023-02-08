@@ -50,7 +50,6 @@ const getTemp = (vis,id,text) => {
     get index() {
         return this.getAttribute('id');
     }
-
     set labelText(value) {
         if(value) {
             this.setAttribute('label-text', value);

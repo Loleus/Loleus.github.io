@@ -23,7 +23,7 @@ customElements.define("my-info", class extends HTMLElement {
   }
   render(prop, oldVal, newVal) {
     console.log(prop, oldVal, newVal)
-      this.shadowRoot.innerHTML = `
+      this.shadowRoot.innerHTML += `
       <link rel="stylesheet" href="./components/info/style.css">
       <section class="container">
       <article id="content" class="content">
@@ -36,7 +36,6 @@ customElements.define("my-info", class extends HTMLElement {
         </p>
       </article>
     </section>
-    <button>About Me</button>
       `;
   }
 });
