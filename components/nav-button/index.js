@@ -67,16 +67,10 @@ const getTemp = (vis, id, text) => {
       return `<my-photo></my-photo>`
     }
   } else {
-    if (id == "photo") {
-      return `
-        <link rel="stylesheet" href="./components/nav-button/css/style.css">
-        <button disabled="true">${text}</button>
-        `
-    } else {
       return `
       <link rel="stylesheet" href="./components/nav-button/css/style.css">
       <button>${text}</button>
-      `}
+      `
   }
 }
 

@@ -49,8 +49,6 @@ customElements.define("my-repos", class extends HTMLElement {
       <link rel="stylesheet" href="./components/soundCloud/style.css">
       <script src="./components/youTube/index.js"></script>
       <link rel="stylesheet" href="./components/youTube/style.css">
-      <script src="./components/photo/index.js"></script>
-      <link rel="stylesheet" href="./components/photo/style.css">
       <script src="./components/nav-button/index.js"></script>
       <link rel="stylesheet" href="./components/nav-button/css/style.css">
         <span class="span">
@@ -83,7 +81,6 @@ customElements.define("my-repos", class extends HTMLElement {
           <nav-button id="about" label-text="About Me"></nav-button>
           <nav-button id="music" label-text="Music Tracks"></nav-button>
           <nav-button id="video" label-text="Music Videos"></nav-button>
-          <nav-button id="photo" label-text="Photo Blog"></nav-button>
         </h1>
         </span>
       `;
