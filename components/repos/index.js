@@ -43,14 +43,8 @@ customElements.define("my-repos", class extends HTMLElement {
     } else {
       this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="./components/repos/style.css">
-      <script src="./components/info/index.js"></script>
-      <link rel="stylesheet" href="./components/info/style.css">
-      <script src="./components/soundCloud/index.js"></script>
-      <link rel="stylesheet" href="./components/soundCloud/style.css">
-      <script src="./components/youTube/index.js"></script>
-      <link rel="stylesheet" href="./components/youTube/style.css">
-      <script src="./components/nav-button/index.js"></script>
-      <link rel="stylesheet" href="./components/nav-button/css/style.css">
+      <script src="./components/modal/index.js"></script>
+      <link rel="stylesheet" href="./components/modal/style.css">
         <span class="span">
           <h1>Feel free to
             <a href="mailto:07zglossie@wp.pl?subject=aboutCode">
@@ -78,9 +72,9 @@ customElements.define("my-repos", class extends HTMLElement {
       }).join("")}
           </table>
           <h1>
-          <nav-button id="about" label-text="About Me"></nav-button>
-          <nav-button id="music" label-text="Music Tracks"></nav-button>
-          <nav-button id="video" label-text="Music Videos"></nav-button>
+          <nav-modal id="about" label-text="About Me"></nav-modal>
+          <nav-modal id="music" label-text="Music Tracks"></nav-modal>
+          <nav-modal id="video" label-text="Music Videos"></nav-modal>
         </h1>
         </span>
       `;
