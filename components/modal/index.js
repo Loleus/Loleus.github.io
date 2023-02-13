@@ -149,7 +149,8 @@ const getTemp = (vis, id, text) => {
   }
 }
 
-customElements.define("nav-modal", class extends HTMLElement {
+export default class Modal extends HTMLElement {
+
   static get observedAttributes() { return ["visibility", "label-text", "id"]; }
   constructor() {
     super();
@@ -190,4 +191,4 @@ customElements.define("nav-modal", class extends HTMLElement {
   render(prop, oldVal, newVal) {
     this.shadowRoot.innerHTML = getTemp(this.visibility, this.index, this.labelText);
   }
-});
+}

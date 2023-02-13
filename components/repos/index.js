@@ -1,4 +1,8 @@
-customElements.define("my-repos", class extends HTMLElement {
+import Modal from "../modal/index.js";
+
+customElements.define("nav-modal", Modal );
+
+export default class Repos extends HTMLElement {
 
   static get observedAttributes() { return ["loading"]; }
 
@@ -80,4 +84,4 @@ customElements.define("my-repos", class extends HTMLElement {
       `;
     }
   }
-});
+};
