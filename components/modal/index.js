@@ -52,9 +52,8 @@ const getTemp = (vis, id, text) => {
       .container {
         pointer-events: auto;
         box-sizing: border-box;
-        max-width: 100vw;
-        width: 100vh;
-        height: auto;
+        width: 100vw;
+        height: 100vh;
         backdrop-filter: blur(6px);
         z-index: 2;
         display: block;
