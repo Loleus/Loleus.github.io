@@ -62,7 +62,6 @@ const getTemp = (vis, id, text) => {
         transform: translate(-50%, -50%);
         top: 50%;
         overflow: auto;
-        border-radius: 1em;
         background: #5a2b045b;
         font-size: 20px;
         cursor: pointer;
@@ -86,12 +85,18 @@ const getTemp = (vis, id, text) => {
         width: 100%;
         height: 100vh;
       }
+      p {
+        width:50%;
+      }
       .container .content {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+      }
+      #player {
+        margin-top:12.5%;
       }
       .container .content p {
         text-shadow: 2px 2px 0px #301e0c;
@@ -128,6 +133,9 @@ const getTemp = (vis, id, text) => {
         .container .content p {
           font-size: 1em;
           line-height: 1.1em;
+        }
+        p {
+          width:90%;
         }
         h1 {
           margin: 6vw 0;
