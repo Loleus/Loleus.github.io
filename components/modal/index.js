@@ -85,9 +85,6 @@ const getTemp = (vis, id, text) => {
         width: 100%;
         height: 100vh;
       }
-      p {
-        width:50%;
-      }
       .container .content {
         position: relative;
         display: flex;
@@ -110,6 +107,7 @@ const getTemp = (vis, id, text) => {
         padding-top: 0;
         color: #ffedd8;
         border-radius: 1em;
+        width:50%;
       }
       .container .content img {
         box-shadow: 1px 1px 3px 0 #181818;
@@ -133,12 +131,7 @@ const getTemp = (vis, id, text) => {
         .container .content p {
           font-size: 1em;
           line-height: 1.1em;
-        }
-        p {
           width:90%;
-        }
-        h1 {
-          margin: 6vw 0;
         }
       }      
       </style>
