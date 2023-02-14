@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/55080103/how-to-separate-web-components-to-individual-files-and-load-them
+https://stackoverflow.com/questions/70260952/how-to-use-html-templates-with-javascript-web-component

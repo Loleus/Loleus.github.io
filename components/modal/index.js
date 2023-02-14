@@ -1,45 +1,25 @@
+let sc;
+fetch("./components/modal/sc.html")
+    .then(stream => stream.text())
+    .then(text => sc = text);
+let yt;
+fetch("./components/modal/yt.html")
+    .then(stream => stream.text())
+    .then(text => yt = text);
+let info;
+fetch("./components/modal/info.html")
+    .then(stream => stream.text())
+    .then(text => info = text);
+
 const getHTML = (id) => {
   if (id == "about") {
-    return `
-  <img class="logo" src="./assets/me.jpg" alt="me">
-  <p>
-    Hi, here Łukasz Kamiński aka Lolo.
-    I'm passionate about programming web aplications, and taking pictures. I have been a CNC operator for several years. Previous occupations: beatmaker, graphic designer, sound engineer, photo editor,
-    DTP, accountant, warehouseman, wire harness fitter.
-    The current technology stack: JavaScript, Web Components,  NodeJS, ExpressJS, Postman, Sql/noSql. (C=) Amiga RULES! (C=)
-  </p>
-  `
+    return `${info}`
   }
   if (id == "music") {
-    return `
-  <iframe id="sc-widget" scrolling="no" frameborder="no" allow="autoplay"
-  src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/loleus/"></iframe>
-<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
-<script type="text/javascript">
-  (function () {
-    var widgetIframe = document.getElementById('sc-widget'),
-      widget = SC.Widget(widgetIframe);
-    widget.bind(SC.Widget.Events.READY, function () {
-      widget.bind(SC.Widget.Events.PLAY, function () {
-        widget.getCurrentSound(function (currentSound) {
-          console.log('sound ' + currentSound.get('') + 'began to play');
-        });
-      });
-      widget.getVolume(function (volume) {
-        console.log('current volume value is ' + volume);
-      });
-      widget.setVolume(50);
-    });
-  }());
-</script>
-  `
+    return `${sc}`
   }
   if (id == "video") {
-    return `
-  <iframe id="player" type="text/html" width="640" height="360"
-  src="https://www.youtube.com/embed?listType=playlist&list=PLkXJmTe_aZnZncsAHK4LgkP6kkt-ataG3"
-  frameborder="0"></iframe>
-  `
+    return `${yt}`
   }
   if (id == "photo") {
     return `<my-photo></my-photo>`
@@ -53,6 +33,7 @@ const getTemp = (vis, id, text) => {
           ${getHTML(id)}
         </article>
       </section>
+      <button>${text}</button>
       `
   } else {
     return `
