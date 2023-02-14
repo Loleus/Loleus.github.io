@@ -48,93 +48,6 @@ const getHTML = (id) => {
 const getTemp = (vis, id, text) => {
   if (vis) {
     return `
-      <style>
-      .container {
-        pointer-events: auto;
-        box-sizing: border-box;
-        width: 100vw;
-        height: 100vh;
-        backdrop-filter: blur(6px);
-        z-index: 2;
-        display: block;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        overflow: auto;
-        background: #5a2b045b;
-        font-size: 20px;
-        cursor: pointer;
-      }
-      .container::after {
-        border-radius: 1em;
-        cursor: pointer;
-        display: block;
-        position: absolute;
-        content: "X";
-        font-size: 4vh;
-        line-height: 5.2vh;
-        color: #a5a5a5;
-        width: 6vh;
-        height: 6vh;
-        right: 1%;
-        top: 1%;
-        background: #272727;
-      }
-      #sc-widget {
-        width: 100%;
-        height: 100vh;
-      }
-      .container .content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      #player {
-        margin-top:12.5%;
-      }
-      .container .content p {
-        text-shadow: 2px 2px 0px #301e0c;
-        text-indent: 1em;
-        text-align: justify;
-        text-justify: auto;
-        font-size: 1em;
-        line-height: 1.2em;
-        margin: 0 auto;
-        padding: 0.7em;
-        padding-top: 0;
-        color: #ffedd8;
-        border-radius: 1em;
-        width:50%;
-      }
-      .container .content img {
-        box-shadow: 1px 1px 3px 0 #181818;
-        width: 260px;
-        height: 260px;
-        padding: 0;
-        margin: 1em 0;
-        border-radius: 50%;
-      }
-      
-      @media only screen and (max-width: 1020px) {
-        .container {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100vw;
-          min-height: 100vh;
-          max-height: 100%;
-          transform: translate(0, 0);
-        }
-        .container .content p {
-          font-size: 1em;
-          line-height: 1.1em;
-          width:90%;
-        }
-      }      
-      </style>
       <section class="container">
         <article id="content" class="content">
           ${getHTML(id)}
@@ -143,7 +56,6 @@ const getTemp = (vis, id, text) => {
       `
   } else {
     return `
-      <link rel="stylesheet" href="./components/modal/style.css">
       <button>${text}</button>
       `
   }
@@ -154,7 +66,6 @@ export default class Modal extends HTMLElement {
   static get observedAttributes() { return ["visibility", "label-text", "id"]; }
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
   }
   get labelText() {
     return this.getAttribute('label-text');
@@ -175,7 +86,7 @@ export default class Modal extends HTMLElement {
   }
   async connectedCallback() {
     this.textContent = this.labelText;
-    this.shadowRoot.addEventListener("click", (e) => {
+    this.addEventListener("click", (e) => {
       this.visibility = !this.visibility
       console.log(this.index)
       window.scrollTo(0, 0);
@@ -189,6 +100,6 @@ export default class Modal extends HTMLElement {
   }
 
   render(prop, oldVal, newVal) {
-    this.shadowRoot.innerHTML = getTemp(this.visibility, this.index, this.labelText);
+    this.innerHTML = getTemp(this.visibility, this.index, this.labelText);
   }
 }
