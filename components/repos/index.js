@@ -22,6 +22,9 @@ export default class Repos extends HTMLElement {
   async getRepos(url) {
     this.loading = true;
     const response = await fetch(url, { mode: 'cors' });
+    const temp = await fetch("./components/repos/template.html")
+    const tempStream = await temp.text()
+    this.base = tempStream;
     const json = await response.json();
     this.reps = json;
     this.loading = false;
@@ -36,52 +39,36 @@ export default class Repos extends HTMLElement {
 
   disconnectedCallback() { }
 
+  setRepos() {
+    let i = 1;
+    this.reps.map(repo => {
+      if (repo.name != "loleus.github.io") {
+        this.shadowRoot.getElementById("repos").innerHTML += `
+          <tr>
+            <td id="no">${i++}</td>
+            <td id="name"><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name}</a></td>
+            <td id="type">${repo.description}</td>
+            <td id="lang">${repo.language}</td>
+          </tr>
+            `
+      }
+    }).join("")
+  }
+
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.render();
   }
-
+getBaseHTML() {
+  this.base;
+fetch("./components/repos/template.html").then(stream => stream.text()).then(text => this.base = text);
+return
+}
   render() {
-    let i = 1;
     if (this.loading) {
       this.shadowRoot.innerHTML = `Loading...`;
     } else {
-      this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="./components/repos/style.css">
-      <script src="./components/modal/index.js"></script>
-      <link rel="stylesheet" href="./components/modal/style.css">
-        <span class="span">
-          <h1>Feel free to
-            <a href="mailto:07zglossie@wp.pl?subject=aboutCode">
-              mail me.
-            </a>
-          </h1>
-          <table>
-            <tr>
-              <th>No</th>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Language</th>
-            </tr>
-            ${this.reps.map(repo => {
-        if (repo.name != "loleus.github.io") {
-          return `
-            <tr>
-              <td id="no">${i++}</td>
-              <td id="name"><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name}</a></td>
-              <td id="type">${repo.description}</td>
-              <td id="lang">${repo.language}</td>
-            </tr>
-              `
-        }
-      }).join("")}
-          </table>
-          <h1>
-          <nav-modal id="about" label-text="About Me"></nav-modal>
-          <nav-modal id="music" label-text="Music Tracks"></nav-modal>
-          <nav-modal id="video" label-text="Music Videos"></nav-modal>
-        </h1>
-        </span>
-      `;
+      this.shadowRoot.innerHTML = `${this.base}`;
+      this.setRepos();
     }
   }
 };
