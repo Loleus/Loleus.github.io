@@ -1,9 +1,9 @@
 let sc;
 let yt;
 let info;
-fetch("./components/modal/sc.html").then(stream => stream.text()).then(text => sc = text);
-fetch("./components/modal/yt.html").then(stream => stream.text()).then(text => yt = text);
-fetch("./components/modal/info.html").then(stream => stream.text()).then(text => info = text);
+fetch("./components/modal/soundcloud/sc.html").then(stream => stream.text()).then(text => sc = text);
+fetch("./components/modal/youtube/yt.html").then(stream => stream.text()).then(text => yt = text);
+fetch("./components/modal/aboutMe/info.html").then(stream => stream.text()).then(text => info = text);
 
 export default class Modal extends HTMLElement {
 
