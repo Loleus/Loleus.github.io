@@ -1,24 +1,18 @@
 import Modal from "../modal/index.js";
-
-customElements.define("nav-modal", Modal );
+customElements.define("nav-modal", Modal);
 
 export default class Repos extends HTMLElement {
-
   static get observedAttributes() { return ["loading"]; }
-
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
   }
-
   get loading() {
     return JSON.parse(this.getAttribute("loading"));
   }
-
   set loading(v) {
     this.setAttribute("loading", JSON.stringify(v));
   }
-
   async getRepos(url) {
     this.loading = true;
     const response = await fetch(url, { mode: 'cors' });
@@ -29,16 +23,13 @@ export default class Repos extends HTMLElement {
     this.reps = json;
     this.loading = false;
   }
-
   async connectedCallback() {
     this.shadowRoot.addEventListener("click", (e) => {
       console.log(e.target)
     });
     await this.getRepos("https://api.github.com/users/Loleus/repos");
   }
-
   disconnectedCallback() { }
-
   setRepos() {
     let i = 1;
     this.reps.map(repo => {
@@ -54,15 +45,9 @@ export default class Repos extends HTMLElement {
       }
     }).join("")
   }
-
   attributeChangedCallback(attrName, oldVal, newVal) {
     this.render();
   }
-getBaseHTML() {
-  this.base;
-fetch("./components/repos/template.html").then(stream => stream.text()).then(text => this.base = text);
-return
-}
   render() {
     if (this.loading) {
       this.shadowRoot.innerHTML = `Loading...`;
