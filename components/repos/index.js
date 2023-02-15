@@ -66,10 +66,10 @@ export default class Repos extends HTMLElement {
         if (repo.name != "loleus.github.io") {
           return `
             <tr>
-              <td>${i++}</td>
-              <td><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name}</a></td>
-              <td>${repo.description}</td>
-              <td>${repo.language}</td>
+              <td id="no">${i++}</td>
+              <td id="name"><a target="_blank" href="https://loleus.github.io/${repo.name}">${repo.name}</a></td>
+              <td id="type">${repo.description}</td>
+              <td id="lang">${repo.language}</td>
             </tr>
               `
         }
