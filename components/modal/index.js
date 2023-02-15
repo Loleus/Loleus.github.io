@@ -1,15 +1,9 @@
 let sc;
-fetch("./components/modal/sc.html")
-    .then(stream => stream.text())
-    .then(text => sc = text);
 let yt;
-fetch("./components/modal/yt.html")
-    .then(stream => stream.text())
-    .then(text => yt = text);
 let info;
-fetch("./components/modal/info.html")
-    .then(stream => stream.text())
-    .then(text => info = text);
+fetch("./components/modal/sc.html").then(stream => stream.text()).then(text => sc = text);
+fetch("./components/modal/yt.html").then(stream => stream.text()).then(text => yt = text);
+fetch("./components/modal/info.html").then(stream => stream.text()).then(text => info = text);
 
 const getHTML = (id) => {
   if (id == "about") {
@@ -41,9 +35,7 @@ const getTemp = (vis, id, text) => {
       `
   }
 }
-
 export default class Modal extends HTMLElement {
-
   static get observedAttributes() { return ["visibility", "label-text", "id"]; }
   constructor() {
     super();
