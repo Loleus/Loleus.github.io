@@ -33,7 +33,7 @@ export default class Repos extends HTMLElement {
   setRepos() {
     let i = 1;
     this.reps.map(repo => {
-      if (repo.name != "loleus.github.io") {
+      if (repo.name != "loleus.github.io" && !(repo.description.includes('#'))) {
         this.shadowRoot.getElementById("repos").innerHTML += `
           <tr>
             <td id="no">${i++}</td>
